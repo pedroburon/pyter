@@ -8,4 +8,5 @@ then
 fi
 
 cd /src/
+
 exec "$@"

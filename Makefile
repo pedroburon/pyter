@@ -8,8 +8,8 @@ build: # Build images for python/ipython 3,2
 	docker build --build-arg VERSION=3 . -t pedroburon/pyter:latest
 	docker tag pedroburon/pyter:latest pedroburon/pyter:3
 	docker build --build-arg VERSION=2 . -t pedroburon/pyter:2
-	docker build --build-arg VERSION=3 --build-arg REQUIREMENTFILE=requirements-ipython.txt . -t pedroburon/pyter:3-ipython
-	docker build --build-arg VERSION=2 --build-arg REQUIREMENTFILE=requirements-ipython.txt . -t pedroburon/pyter:2-ipython
+	docker build --build-arg VERSION=3 --build-arg REQUIREMENTS_FILE=requirements-ipython.txt . -t pedroburon/pyter:3-ipython
+	docker build --build-arg VERSION=2 --build-arg REQUIREMENTS_FILE=requirements-ipython.txt . -t pedroburon/pyter:2-ipython
 
 push: build # push images to docker hub
 	docker push pedroburon/pyter:latest
